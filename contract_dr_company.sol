@@ -11,6 +11,29 @@ contract DrCompany {
   enum state { Created, Locked, Inactive }
   State public state;
 
+  contract MyMedData {
+    string private name;
+    uint private age;
+    string private illness;
+    string private ...
+
+    function SetName(string newname) {
+        name = newname;
+    }
+
+    function GetName() returns(string) {
+        return name;
+    }
+
+    function SetAge(uint newage) {
+        age = newage;
+    }
+
+    function GetAge() returns(uint) {
+        return age;
+    }
+}
+
   function DataUpload() public uploading {
     uploader = msg.sender;
     data = msg.data;
